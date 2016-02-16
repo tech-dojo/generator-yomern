@@ -1,0 +1,21 @@
+{
+  "name": "generator-mern",
+  "version": "1.0.0",
+  "description": "",
+  "files":[
+     "app",
+     "server"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Tech Dojo",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.22.5"
+  }
+}
