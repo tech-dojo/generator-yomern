@@ -3,12 +3,7 @@ var chalk = require('chalk');
 var mkdirp = require('mkdirp');
 module.exports = yeoman.Base.extend({
 
-  method1: function () {
-    console.log('method 1 just ran');
-  },
-  method2: function () {
-    console.log('method 2 just ran');
-  },
+
   promptUser: function() {
         var done = this.async();
 
@@ -27,6 +22,7 @@ module.exports = yeoman.Base.extend({
         this.prompt(prompts, function (props) {
             this.moduleName = props.moduleName;
             this.addDemoSection = props.addDemoSection;
+            this.addFieldName = props.addFieldName;
 
             done();
         }.bind(this));
@@ -62,14 +58,77 @@ var text = "Hello \n Duffer \n Hi";
     this.template("app/stores/_ArticleStore.jsx", "app/stores/"+this.moduleName+"Store.jsx", context);
 
     this.template("server/_articles.server.controller.js", "server/controllers/"+this.moduleName+"s.server.controller.js", context);
-    this.template("server/_Article.js", "server/models/"+this.moduleName+".js", context);
+//    this.template("server/_Article.js", "server/models/"+this.moduleName+".js", context);
 
-    console.log(chalk.red.bgWhite.bold('Do Route Files'));
+    console.log(chalk.red.bgWhite.bold('Add the front-end route for the module in app.jsx and also add a backend-route in routeHelper.js'));
   }
 
   else{
      console.log(chalk.red.bgWhite.bold('Aborted'));
      }
+},
+ AddFieldName: function () {
+if(this.addDemoSection){
+      var done = this.async();
+    var prompts = [{
+        name: 'fieldName',
+        message: 'Add a field name to the model'
+    },
+    {
+        type: 'confirm',
+        name: 'addFieldName2',
+        message: 'Would you like to add another field name to the model?'
+    }];
+
+    this.prompt(prompts, function (props) {
+        this.fieldName = props.fieldName;
+        this.addFieldName2 = props.addFieldName2;
+
+
+
+        done();
+    }.bind(this));
+
 }
+
+  },
+  AddFieldName2: function () {
+ if(this.addDemoSection && this.addFieldName2){
+       var done = this.async();
+     var prompts = [{
+         name: 'fieldName2',
+         message: 'What is your other field name?'
+     }];
+
+
+     this.prompt(prompts, function (props) {
+         this.fieldName2 = props.fieldName2;
+
+
+         done();
+     }.bind(this));
+
+ }
+
+   },
+
+    createModel: function () {
+
+      if(this.fieldName){
+var text = this.fieldName+": { \n type: String, \n trim: true \n}, \n";
+}
+if ( this.addFieldName2) {
+  var text = text +this.fieldName2+": { \n type: String,  \n trim: true \n}," ;
+
+}
+      var context = {
+          fieldName: this.fieldName,
+                    //fieldName2: this.fieldName2,
+          module_name: this.moduleName,
+          texts: text
+      };
+
+        this.template("server/_Article.js", "server/models/"+this.moduleName+".js", context);
+    }
 
 });

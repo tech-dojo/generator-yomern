@@ -1,9 +1,16 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var <%= module_name%>Schema = {
+var studentSchema = {
 
 
-<%= texts%>
+name: { 
+ type: String, 
+ trim: true 
+}, 
+age: { 
+ type: String,  
+ trim: true 
+},
   content: {
     type: String,
     default: '',
@@ -23,5 +30,5 @@ var <%= module_name%>Schema = {
   }
 }
 
-var <%=module_name%> = mongoose.model('<%=module_name%>', <%=module_name%>Schema, '<%=module_name%>s');
-module.exports = <%=module_name%>;
+var student = mongoose.model('student', studentSchema, 'students');
+module.exports = student;
