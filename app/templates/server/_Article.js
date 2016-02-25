@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var <%= module_name%>Schema = {
 
 
-<%= texts%>
+<%-texts%>
   content: {
     type: String,
     default: '',
