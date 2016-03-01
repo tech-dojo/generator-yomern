@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 var <%= module_name%>Schema = {
 
 
+
 <%-texts%>
   user: {
     type: Schema.ObjectId,

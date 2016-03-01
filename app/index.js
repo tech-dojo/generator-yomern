@@ -1,7 +1,6 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var mkdirp = require('mkdirp');
-var s = require('underscore.string');
 module.exports = yeoman.Base.extend({
 
 
@@ -9,6 +8,7 @@ module.exports = yeoman.Base.extend({
     var done = this.async();
 
     // have Yeoman greet the user
+    console.log("Hello ");
 
     var prompts = [{
       name: 'moduleName',
@@ -27,28 +27,10 @@ module.exports = yeoman.Base.extend({
       done();
     }.bind(this));
   },
-
-  //     scaffoldFolders: function(){
-  // if(this.addDemoSection){
-  //    mkdirp("app");
-  //    mkdirp("app/components");
-  //    mkdirp("app/components/" + this.moduleName);
-  //    mkdirp("app/stores");
-  //    mkdirp("app/routes");
-  //    mkdirp("server");
-  //    mkdirp("app/controllers/" + this.moduleName);
-  //    mkdirp("app/models/" + this.moduleName);
-  // }
-  // else{
-  //   console.log(chalk.red.bgWhite.bold('Aborted'));
-  //   }
-  // },
   copyMainFiles: function() {
     if (this.addDemoSection) {
-      var text = "Hello \n Duffer \n Hi";
       var context = {
-        module_name: this.moduleName,
-        text_name: text
+        module_name: this.moduleName
       };
       this.template("app/_CreateArticle.jsx", "app/components/" + this.moduleName + "/Create" + this.moduleName + ".jsx", context);
       this.template("app/_EditArticle.jsx", "app/components/" + this.moduleName + "/Edit" + this.moduleName + ".jsx", context);
@@ -58,7 +40,8 @@ module.exports = yeoman.Base.extend({
       this.template("app/stores/_ArticleStore.jsx", "app/stores/" + this.moduleName + "Store.jsx", context);
 
       this.template("server/_articles.server.controller.js", "server/controllers/" + this.moduleName + "s.server.controller.js", context);
-      //    this.template("server/_Article.js", "server/models/"+this.moduleName+".js", context);
+      this.template("server/_routes.js", "server/routes/" + this.moduleName + ".server.routes.js", context);
+
 
       console.log(chalk.red.bgWhite.bold('Add the front-end route for the module in app.jsx and also add a backend-route in routeHelper.js'));
     } else {
@@ -111,18 +94,15 @@ module.exports = yeoman.Base.extend({
 
   createModel: function() {
 
-
-
     if (this.fieldName) {
-      var text = this.fieldName + ': {\n type: String,\n default: \'\', \n trim: true \n}, \n';
+      var text = this.fieldName + ": { \n type: String,\n default: \'\',  \n trim: true \n}, \n";
     }
     if (this.addFieldName2) {
-      var text = text + this.fieldName2 + ": {\n type: String, \n default: \'\', \n trim: true \n},";
+      var text = text + this.fieldName2 + ": { \n type: String,\n default: \'\',  \n trim: true \n},";
 
     }
     var context = {
       fieldName: this.fieldName,
-      //fieldName2: this.fieldName2,
       module_name: this.moduleName,
       texts: text
     };
