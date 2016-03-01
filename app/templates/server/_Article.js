@@ -4,14 +4,6 @@ var <%= module_name%>Schema = {
 
 
 <%-texts%>
-  content: {
-    type: String,
-    default: '',
-    trim: true,
-    required: 'Content required'
-
-  },
-
   user: {
     type: Schema.ObjectId,
     ref: 'User'
