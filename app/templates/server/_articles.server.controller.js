@@ -17,9 +17,9 @@ module.exports.list = function(req, res) {
 };
 
 module.exports.create = function(req, res) {
-  var <%=module_name%> = new <%=module_name%>(req.body);
-  <%=module_name%>.user = req.user;
-  <%=module_name%>.save(function(err, data) {
+  var <%=smallModuleName%> = new <%=module_name%>(req.body);
+  <%=smallModuleName%>.user = req.user;
+  <%=smallModuleName%>.save(function(err, data) {
     if (err) {
       return res.status(400).send({
 
@@ -32,41 +32,41 @@ module.exports.create = function(req, res) {
 };
 
 module.exports.read = function(req, res) {
-  res.json(req.<%=module_name%>);
+  res.json(req.<%=smallModuleName%>);
 };
 
 
 exports.delete = function(req, res) {
-	var <%=module_name%> = req.<%=module_name%>;
-	<%=module_name%>.remove(function(err) {
+	var <%=smallModuleName%> = req.<%=smallModuleName%>;
+	<%=smallModuleName%>.remove(function(err) {
 		if (err) {
 			return res.status(400).send();
 		} else {
-			res.json(<%=module_name%>);
+			res.json(<%=smallModuleName%>);
 		}
 	});
 };
 
 
 module.exports.update = function(req, res) {
-  var <%=module_name%> = req.<%=module_name%>;
+  var <%=smallModuleName%> = req.<%=smallModuleName%>;
 
-  	<%=module_name%> = _.extend(<%=module_name%>, req.body);
+  	<%=smallModuleName%> = _.extend(<%=smallModuleName%>, req.body);
 
-  	<%=module_name%>.save(function(err) {
+  	<%=smallModuleName%>.save(function(err) {
   		if (err) {
   			return res.status(400).send();
   		} else {
-  			res.json(<%=module_name%>);
+  			res.json(<%=smallModuleName%>);
   		}
   	});
 };
 
-exports.<%=module_name%>ByID = function(req, res, next, id) {
-	<%=module_name%>.findById(id).populate('user', 'email').exec(function(err, <%=module_name%>) {
+exports.<%=smallModuleName%>ByID = function(req, res, next, id) {
+	<%=module_name%>.findById(id).populate('user', 'email').exec(function(err, <%=smallModuleName%>) {
 		if (err) return next(err);
-		if (!<%=module_name%>) return next(new Error('Failed to load <%=module_name%> ' + id));
-		req.<%=module_name%> = <%=module_name%>;
+		if (!<%=smallModuleName%>) return next(new Error('Failed to load <%=module_name%> ' + id));
+		req.<%=smallModuleName%> = <%=smallModuleName%>;
 		next();
 	});
 };

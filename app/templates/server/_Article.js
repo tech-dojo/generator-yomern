@@ -1,10 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+
 var <%= module_name%>Schema = {
 
-
-
-<%-texts%>
+<%-modelFields%>
   user: {
     type: Schema.ObjectId,
     ref: 'User'
@@ -16,5 +15,5 @@ var <%= module_name%>Schema = {
   }
 }
 
-var <%=module_name%> = mongoose.model('<%=module_name%>', <%=module_name%>Schema, '<%=module_name%>s');
+var <%=module_name%> = mongoose.model('<%=module_name%>', <%=module_name%>Schema,'<%=smallModuleName%>s');
 module.exports = <%=module_name%>;

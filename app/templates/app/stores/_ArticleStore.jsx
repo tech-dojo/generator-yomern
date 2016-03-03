@@ -4,11 +4,11 @@ import auth from './../services/Authentication';
 
 function <%= module_name%>Store() {
 
-  let <%=module_name%>List = {},
+  let <%=smallModuleName%>List = {},
     changeListeners = [],
-    <%=module_name%> = {},
+    <%=smallModuleName%> = {},
     error = '',
-    <%=module_name%>Deleted = 'false';
+    <%=smallModuleName%>Deleted = 'false';
 
   function triggerListeners() {
     changeListeners.forEach(function(listener) {
@@ -16,22 +16,22 @@ function <%= module_name%>Store() {
     })
   };
   function fetch<%=module_name%>List() {
-    get("/api/<%=module_name%>s").then((data) => {
-      <%=module_name%>List = data;
+    get("/api/<%=smallModuleName%>s").then((data) => {
+      <%=smallModuleName%>List = data;
       triggerListeners();
     });
   }
   function fetch<%=module_name%>(id) {
-    get(`api/<%=module_name%>s/${id}`).then((data) => {
-      <%=module_name%> = data;
+    get(`api/<%=smallModuleName%>s/${id}`).then((data) => {
+      <%=smallModuleName%> = data;
       triggerListeners();
     });
   };
 
-  function add<%=module_name%>(<%=module_name%>, history) {
-    post("/api/<%=module_name%>s", <%=module_name%>).then((g) => {
-      <%=module_name%>._id = g._id;
-      history.pushState(null, '/<%=module_name%>s/' + g._id);
+  function add<%=module_name%>(<%=smallModuleName%>, history) {
+    post("/api/<%=smallModuleName%>s", <%=smallModuleName%>).then((g) => {
+      <%=smallModuleName%>._id = g._id;
+      history.pushState(null, '/<%=smallModuleName%>s/' + g._id);
     }).catch((err) => {
       if (err.status == 401) {
         error = err.message;
@@ -40,12 +40,12 @@ function <%= module_name%>Store() {
     })
   }
 
-  function edit<%=module_name%>(<%=module_name%>, id, history) {
+  function edit<%=module_name%>(<%=smallModuleName%>, id, history) {
 
-    put(`api/<%=module_name%>s/${id}`, <%=module_name%>).then((data) => {
-      <%=module_name%> = data;
+    put(`api/<%=smallModuleName%>s/${id}`, <%=smallModuleName%>).then((data) => {
+      <%=smallModuleName%> = data;
       triggerListeners();
-      history.pushState(null, '/<%=module_name%>s/' + data._id);
+      history.pushState(null, '/<%=smallModuleName%>s/' + data._id);
     }).catch((err) => {
       if (err.status == 401) {
         error = err.message;
@@ -56,10 +56,10 @@ function <%= module_name%>Store() {
 
   function delete<%=module_name%>(id, history) {
 
-    del(`api/<%=module_name%>s/${id}`).then((g) => {
-      <%=module_name%>Deleted = 'true';
+    del(`api/<%=smallModuleName%>s/${id}`).then((g) => {
+      <%=smallModuleName%>Deleted = 'true';
       triggerListeners();
-      history.pushState(null, '/<%=module_name%>s');
+      history.pushState(null, '/<%=smallModuleName%>s');
     }).catch((err) => {
       if (err.status == 401) {
         error = err.message;
@@ -69,16 +69,16 @@ function <%= module_name%>Store() {
   }
 
   function get<%=module_name%>List() {
-    return <%=module_name%>List;
+    return <%=smallModuleName%>List;
   };
 
   function get<%=module_name%>() {
-    <%=module_name%>Deleted = 'false';
-    return <%=module_name%>;
+    <%=smallModuleName%>Deleted = 'false';
+    return <%=smallModuleName%>;
   };
 
   function <%=module_name%>DeletionStatus() {
-    return <%=module_name%>Deleted;
+    return <%=smallModuleName%>Deleted;
   };
 
   function onChange(listener) {
