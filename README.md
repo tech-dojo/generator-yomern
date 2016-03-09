@@ -1,8 +1,7 @@
 # MERN GENERATOR
 
-*React Framework for Fullstack JavaScript Web Applications*
+*Yoeman Generator for MERN Framework.*
 
-#### version 0.0.1
 
 ### Usage Instructions
 
