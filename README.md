@@ -2,6 +2,7 @@
 
 *Yoeman Generator for MERN Framework.*
 
+The CRUD module generator will help you create a new CRUD module, similar to the article sample provided with the project.
 
 ### Usage Instructions
 
