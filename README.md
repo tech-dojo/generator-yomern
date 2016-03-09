@@ -3,7 +3,7 @@
 *CRUD Module Generator for MERN Framework.*
 
 
-The CRUD module generator will help you create a new CRUD module, similar to the article sample provided with the project.
+The CRUD module generator will help to create a new CRUD module, similar to the article sample provided with the project.
 
 
 ## Getting Started
@@ -22,6 +22,7 @@ Now it's ready to get started with the MERN generator. The generator will help t
 ### Documentation
 
 [View documentation](http://merndoc.tech-dojo.org)
+
 [Improve documentation](https://github.com/tech-dojo/mern-doc)
 
 
@@ -29,6 +30,7 @@ Now it's ready to get started with the MERN generator. The generator will help t
 ### Framework
 
 [View Framework](http://mern.tech-dojo.org)
+
 [View on Github](https://github.com/tech-dojo/mern)
 
 
