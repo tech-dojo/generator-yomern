@@ -16,7 +16,15 @@ $ npm install -g yo
 
 After *yo* has been installed, clone the MERN generator as well.
 
-Now it's ready to get started with the MERN generator. The generator will help to create a MERN CRUD module.
+Install dependencies with `npm install`
+
+
+### Usage Instructions
+
+On the project root folder run command `yo mern`.
+
+
+Now it's ready to get started with the MERN generator.
 
 
 ### Documentation
