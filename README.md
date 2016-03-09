@@ -1,6 +1,4 @@
-# [MERN GENERATOR]
-
-![logo](app/images/mern.gif?raw=true)
+# MERN GENERATOR
 
 *React Framework for Fullstack JavaScript Web Applications*
 
