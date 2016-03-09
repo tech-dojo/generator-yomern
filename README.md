@@ -9,9 +9,11 @@ The CRUD module generator will help you create a new CRUD module, similar to the
 
 Before you begin make sure you have the [yo scaffolding tool](http://yeoman.io/learning/index.html) installed (As it is part of the Yeoman tool set you might have installed it before). To globally install *yo* you will need to use npm:
 
+
 ```
 $ npm install -g yo
 ```
+
 
 **Note:** Your user might not have the permissions to install package globally, so use a super user or **sudo**.
 
