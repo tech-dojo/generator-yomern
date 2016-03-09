@@ -18,13 +18,13 @@ After *yo* has been installed, clone the MERN generator as well.
 
 Install dependencies with `npm install`
 
+Now it's ready to get started with the MERN generator.
+
 
 ### Usage Instructions
 
 On the project root folder run command `yo mern`.
 
-
-Now it's ready to get started with the MERN generator.
 
 
 ### Documentation
