@@ -19,12 +19,20 @@ $ npm install -g yo
 
 Once you have *yo* installed, you will need to clone the MERN generator as well.
 
-You are now ready to get started with the MEAN.JS generator. The generator will help you create a MEAN.JS application.
+You are now ready to get started with the MERN generator. The generator will help you create a MERN CRUD module.
 
 ### Documentation
 [View documentation](http://merndoc.tech-dojo.org)
 
 [Improve documentation](https://github.com/tech-dojo/mern-doc)
+
+
+
+### Framework
+[View Framework](http://mern.tech-dojo.org)
+
+[View on Github](https://github.com/tech-dojo/mern)
+
 
 ### License
 
