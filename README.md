@@ -5,21 +5,19 @@
 
 The CRUD module generator will help you create a new CRUD module, similar to the article sample provided with the project.
 
-### Usage Instructions
+## Getting Started
 
-1. Clone the repository on GitHub
+Before you begin make sure you have the [yo scaffolding tool](http://yeoman.io/learning/index.html) installed (As it is part of the Yeoman tool set you might have installed it before). To globally install *yo* you will need to use npm:
 
-2. Make sure MongoDB, Node.js and NPM are installed
+```
+$ npm install -g yo
+```
 
-3. Run `mongodb` in the background
+**Note:** Your user might not have the permissions to install package globally, so use a super user or **sudo**.
 
-4. Install global dependencies with `npm install -g gulp react-tools browserify`
+Once you have *yo* installed, you will need to clone the MERN generator as well.
 
-5. Install dependencies with `npm install`
-
-6. Run app with `gulp serve`
-
-7. Run tests with `gulp test` 
+You are now ready to get started with the MEAN.JS generator. The generator will help you create a MEAN.JS application.
 
 ### Documentation
 [View documentation](http://merndoc.tech-dojo.org)
