@@ -1,38 +1,33 @@
 # MERN GENERATOR
 
-*CRUD Module Generator for MERN Framework.*
+*CRUD Module Generator for [MERN Framework](https://github.com/tech-dojo/mern).*
 
 
-The CRUD module generator will help to create a new CRUD module, similar to the article sample provided with the project.
+The CRUD module generator will help to create a new CRUD module, similar to the article sample provided with the framework.
 
 
 ## Getting Started
 
-Make sure the [yo scaffolding tool](http://yeoman.io/learning/index.html) has been installed (It is part of the Yeoman tool). To globally install *yo* use npm:
+Make sure the [yo scaffolding tool](http://yeoman.io/learning/index.html) has been installed (It is part of the Yeoman tool), and then install generator-yomern:
+
 ```
 $ npm install -g yo
+$ npm install generator-yomern
 ```
 **Note:** User might not have the permissions to install package globally, use a super user or **sudo**.
 
-After *yo* has been installed, clone the MERN generator as well.
-
-Install dependencies with `npm install`
-
-Now it's ready to be used.
-
-
 ### Usage Instructions
 
-On the project root folder run command `yo mern`.
-
-
+Run the following command in your MERN project folder and follow the instructions to generate the CRUD modules:
+```
+$ yo yomern
+```
 
 ### Documentation
 
 [View documentation](http://merndoc.tech-dojo.org)
 
 [Improve documentation](https://github.com/tech-dojo/mern-doc)
-
 
 
 ### Framework

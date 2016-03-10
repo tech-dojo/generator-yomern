@@ -21,10 +21,10 @@
     "url": "http://tech-dojo.org"
   },
   "contributors": [
-    {"name": "Aquibur R. Khan", "url": "https://twitter.com/AquiburRKhan"},
-    {"name": "Mahfuz Aftab", "url": "https://twitter.com/mahfuzdboss"},
-    {"name": "Shamiul Hoque", "url": "https://twitter.com/shoqueApp"},
-    {"name": "Shama Hoque", "url": "https://twitter.com/ShamaHoque"}
+    {"name": "Aquibur R. Khan", "url": "https://twitter.com/AquiburRKhan", "email": "ark.aquib17@gmail.com"},
+    {"name": "Mahfuz Aftab", "url": "https://twitter.com/mahfuzdboss", "email": "mahfuz.cracker@gmail.com"},
+    {"name": "Shamiul Hoque", "url": "https://twitter.com/shoqueApp", "email": "shamiul@tech-dojo.org"},
+    {"name": "Shama Hoque", "url": "https://twitter.com/ShamaHoque","email": "shama@tech-dojo.org"}
   ],
   "license": "MIT",
   "dependencies": {
