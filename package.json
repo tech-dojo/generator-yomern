@@ -1,10 +1,10 @@
 {
-  "name": "generator-mern",
+  "name": "generator-yomern",
   "version": "1.0.0",
   "description": "",
-  "files":[
-     "app",
-     "server"
+  "files": [
+    "app",
+    "server"
   ],
   "main": "index.js",
   "scripts": {
