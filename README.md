@@ -3,7 +3,7 @@
 *CRUD Module Generator for [MERN Framework](https://github.com/tech-dojo/mern).*
 
 
-The CRUD module generator will help to create a new CRUD module, similar to the article sample provided with the framework.
+This Yeoman generator will help to create a new CRUD module, similar to the article sample provided with the framework.
 
 
 ## Getting Started
@@ -18,7 +18,7 @@ $ npm install generator-yomern
 
 ### Usage Instructions
 
-Run the following command in your MERN project folder and follow the instructions to generate the CRUD modules:
+Run the following command in your MERN project folder and follow the instructions to generate the CRUD module files:
 ```
 $ yo yomern
 ```
