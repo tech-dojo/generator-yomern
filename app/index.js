@@ -97,7 +97,7 @@ module.exports = yeoman.Base.extend({
       var handleInput = handleInput +"handleInput"+capitalfieldName2+"(value) { \n this.setState({ "+this.moduleName+": value }); \n }; \n \n";
       var inputHtml = inputHtml+"handleInput"+capitalfieldName2+" = {this.handleInput"+capitalfieldName2+"}";
       var formhandleInput = formhandleInput +"handleInput"+capitalfieldName2+"(e) { \n this.props."+this.moduleName+"."+this.fieldName2+" = e.target.value; \n this.props.handleInput"+capitalfieldName2+"(this.props."+this.moduleName+"); \n } \n ";
-      var formInputHtml = formInputHtml + "<Input type=\"text\" value={"+this.moduleName+"."+this.fieldName2+"} label=\""+capitalfieldName+"\" required onChange={this.handleInput"+capitalfieldName2+"} placeholder=\"Enter "+this.moduleName+" "+capitalfieldName2+"\" /> ";
+      var formInputHtml = formInputHtml + "<Input type=\"text\" value={"+this.moduleName+"."+this.fieldName2+"} label=\""+capitalfieldName2+"\" required onChange={this.handleInput"+capitalfieldName2+"} placeholder=\"Enter "+this.moduleName+" "+capitalfieldName2+"\" /> ";
     }
 
     var context = {
