@@ -29,7 +29,7 @@ module.exports = yeoman.Base.extend({
 
   copyMainFiles: function () {
     if (this.module) {
-      console.log(chalk.red.bgWhite.bold('Add the front-end route for the module in app.jsx, add a backend-route in routeHelper.js, require the backend-route file in the express.js file and require the model in server.js file'));
+      console.log(chalk.red.bgWhite.bold('Add the front-end routes for the module in app.jsx, add the backend-routes and require the model in routeHelper.js, require the backend-route file in the express.js file and require the model in server.js file'));
     } else {
       console.log(chalk.red.bgWhite.bold('Aborted'));
     }
