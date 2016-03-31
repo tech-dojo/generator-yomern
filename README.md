@@ -13,6 +13,7 @@ Make sure the [yo scaffolding tool](http://yeoman.io/learning/index.html) has be
 ```
 $ npm install -g yo
 $ npm install generator-yomern
+$ npm link
 ```
 **Note:** User might not have the permissions to install package globally, use a super user or **sudo**.
 
